@@ -22,7 +22,7 @@ return new class extends Migration
             $table->longText('exception');
             $table->timestamp('failed_at')->useCurrent();
         });
-    }
+    }git remote add origin https://github.com/gdmgent-webdev2/laravel-todo-example.git
 
     /**
      * Reverse the migrations.
