@@ -31,7 +31,7 @@
 
 </div>
 <hr>
-<h2>Ough, these 'r done!</h2>
+<h3>These tasks are done</h3>
 <div class="todos">
     <div class="todo-group">
         <p class="todo">Update homebrew, php, composer, ...</p>
