@@ -2,12 +2,13 @@
     <div class="flex-start">
       <h3>Categories</h3>
       <ul>
-        <li class="active">
-          <a href="#">Default</a>
-        </li>
-        <li>
-          <a href="#">Groceries</a>
-        </li>
+        @foreach ($categories as $category)
+            <li class="{{ $current_category->id == $category->id ? 'active' : ''}}">
+              <a href="{{ route('category.index', $category->slug) }}">
+                {{ $category->name }}
+              </a>
+            </li>
+        @endforeach
       </ul>
     </div>
     <div class="flex-end">

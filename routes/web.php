@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TaskController::class, "redirect"]);
 
+// task routes, based on category
 Route::get('/categorie/{category}', [TaskController::class, "index"])
     ->name('category.index');
-Route::post('/categorie/{category}', [TaskController::class, "store"]);
+Route::post('/categorie/{category}', [TaskController::class, "store"])
+    ->name('category.store');
+Route::put('/categorie/{category}', [TaskController::class, "update"])
+    ->name('category.update');
+Route::delete('/categorie/{category}', [TaskController::class, "delete"])
+    ->name('category.delete');
+        

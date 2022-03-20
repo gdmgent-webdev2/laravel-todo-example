@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Quicksand:wght@300&display=swap"
     rel="stylesheet">
-  <script src="https://kit.fontawesome.com/VERVANGEN-DOOR-EIGEN-KEY.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/{{ env('KEY_FONTAWESOME') }}.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
   <title>Tough Do's</title>
 </head>

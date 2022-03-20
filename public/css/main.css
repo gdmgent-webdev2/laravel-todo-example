@@ -40,7 +40,7 @@ h2 {
   font-size: 1.5rem;
 }
 
-p {
+article p {
   margin-bottom: 1rem;
 }
 
@@ -122,7 +122,7 @@ main {
 }
 
 /** form **/
-form {
+form.add {
   padding: 1rem;
   background-color: var(--color-primary);
   border-radius: 5px;
@@ -161,6 +161,10 @@ form {
   padding: 0.5rem 1rem;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
+}
+
+.input-group.is-invalid input {
+  border-color: red !important;
 }
 
 .todo-group {
