@@ -15,8 +15,7 @@ class TaskController extends Controller
             ->route('category.index', $defaultCategory->slug);
     }
 
-    public function index($category) {
-        
+    public function index(Request $r, $category) {
         $category = Category::where('slug', $category)->firstOrFail();
         
         return view('tasks', [

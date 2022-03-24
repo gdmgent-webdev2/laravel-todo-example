@@ -15,7 +15,7 @@
     @csrf
     <div class="input-group @error('task') is-invalid @enderror">
         <input type="hidden" name="category" value="{{ $current_category->id }}">
-        <input type="text" name="task" placeholder="What to do next?" class="input-field">
+        <input type="text" name="task" placeholder="{{ __('fields.what_to_do') }}" class="input-field">
         <button type="submit">
             <i class="fa fa-plus"></i>
         </button>
@@ -64,5 +64,5 @@
 @endsection
 
 @section('title')
-<h2>OMG. so much stuff to do!</h2>
+<h2>{{ __('title_stuff') }}</h2>
 @endsection

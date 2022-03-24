@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', [TaskController::class, "redirect"]);
 
 // task routes, based on category
@@ -25,4 +24,9 @@ Route::put('/categorie/{category}', [TaskController::class, "update"])
     ->name('category.update');
 Route::delete('/categorie/{category}', [TaskController::class, "delete"])
     ->name('category.delete');
-        
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
