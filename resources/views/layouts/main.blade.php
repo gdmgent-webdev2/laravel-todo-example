@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Quicksand:wght@300&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/{{ env('KEY_FONTAWESOME') }}.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <title>Tough Do's</title>
 </head>
 
@@ -37,7 +37,7 @@
   @include('partials.footer')
 
   @yield('scripts')
-  <script type="module" src="{{ asset('scripts/app.js') }}"></script>
+  <script type="module" src="{{ asset('js/app.todo.js') }}"></script>
 
 </body>
 
