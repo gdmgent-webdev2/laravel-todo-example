@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\sendNewTaskMail;
 use App\Models\Category;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class TaskController extends Controller
 {
@@ -36,13 +39,16 @@ class TaskController extends Controller
             'category' => 'required|exists:categories,id'
         ]);
 
-
         // add to database
         $task = new Task();
         $task->name = $r->task;
         $task->category_id = $r->category;
         $task->is_complete = 0;
         $task->save();
+
+        $userEmail = Auth::user()->email;
+        
+        Mail::to($userEmail)->send(new sendNewTaskMail($task));
 
         return redirect()->back();
     }
